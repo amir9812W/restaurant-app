@@ -1,0 +1,155 @@
+.modal-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.644);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  top: 0;
+}
+
+.another-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  width: 80%;
+  height: 80vh;
+  overflow-y: scroll;
+  background-color: #081684;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.buttom-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  background-color:  #ee82ee;
+  align-self: flex-end;
+}
+
+.close-button {
+  background-color: inherit;
+  border: 1px orange solid;
+  padding: 20px 30px;
+  font-family: Roboto;
+  font-size: 20px;
+  border-radius: 40px;
+  border-color: #081684;
+  color:#081684;
+}
+
+.order-button {
+  background-color:#081684;
+  border: 1px orange solid;
+  padding: 20px 30px;
+  color:#ee82ee;
+  font-family: Roboto;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.total-amount p {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 600;
+  color: #081684;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns : 120px 120px;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  gap: 40px;
+}
+
+.grid {
+  grid-column: 1 / span 2;
+  align-self: center;
+  text-wrap:nowrap;
+  color:#081684;
+}
+
+.ordered-items {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ee82ee;
+  padding: 20px;
+  border-radius: 10px;
+  align-self:auto;
+}
+
+.input-section {
+  background-color: transparent;
+  padding: 10px 10px;
+  border-style: solid;
+  outline: none;
+  border-radius: 25px;
+  border-color: #081684;
+  color:#081684;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.left p{
+  font-family: Roboto;
+  font-size: 18px;
+  color: #081684;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 4px;
+}
+
+.right{
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right button{
+  width: 60px;
+  height: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #081684;
+  color: #ee82ee;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.content-con{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 200px;
+  padding-bottom: 14px;
+}
+

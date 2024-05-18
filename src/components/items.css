@@ -1,0 +1,17 @@
+.info-container {
+  background-color: #d16ed1;
+  color: white;
+  font-family: Roboto;
+  padding: 50px 100px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(38, 0, 255);
+}
+
+.des {
+  max-width: 400px;
+}

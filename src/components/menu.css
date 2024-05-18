@@ -1,0 +1,15 @@
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  width: 70%;
+  margin: 10px;
+  border-radius: 20px;
+  flex-direction:column;
+  padding: 50px 10px;
+  gap: 10px;
+  background-color: #081684;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+}
