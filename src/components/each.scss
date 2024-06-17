@@ -1,0 +1,115 @@
+@import '../index.scss';
+
+.content {
+  background-color: rgb(59, 58, 58);
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: background-color .5s;
+  border-radius: 10px;
+  @include phone {
+    width: 98%;
+  }
+  h1{
+    color: white;
+  }
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include phone{
+      max-width: 80px;
+    }
+    p {
+      color: white;
+      @include phone {
+        font-size: 12px;
+      }
+    }
+  }
+  .modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5); 
+    flex-direction: column;
+
+    .container {
+      background-color: lightblue;
+      width: 70%;
+      height: 90vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      gap : 10px;
+      overflow-y: scroll;
+      @include phone{
+        height: 80vh;
+        width: 80%;
+      }
+      .up-section {
+        background-color: black;
+        padding: 10px;
+        border-radius: 10px;
+        h1{
+          font-size: 20px;
+        }
+        @include phone{
+          padding: 5px;
+        }
+        h1{
+          @include phone{
+            font-size: 18px;
+          }
+        }
+      }
+      .cont {
+        background-color: rgb(94, 92, 92);
+        width: 60%;
+        height: 60vh;
+        overflow-y: scroll;
+        gap: 10px;
+        @include phone {
+          width: 90%;
+        }
+        .list-of-items {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+          @include phone {
+            width: 100%;
+            padding: 10px 0px;
+          }
+          .information {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            background-color: white;
+
+            p{
+              font-size: 12px;
+              @include phone {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content:hover{
+  background-color: rgba(49, 49, 49, .5);
+}
