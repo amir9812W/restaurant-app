@@ -10,6 +10,9 @@ function App() {
   const [items, setItems] = useState([]);
   const [isLoading, setLoading] = useState(true);  
 
+  useEffect(() => {
+
+  }, [])
 
   useEffect(() => {
     const fetchData = async() => {
