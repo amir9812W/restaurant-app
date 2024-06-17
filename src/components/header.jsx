@@ -5,9 +5,10 @@ import res from './final.mp4'
 const Header = (props) => {
 
   const toggleHandler = () => {
-    props.togg(prev => !prev)
+    props.togg(prev => !prev);
+    console.log('initiala state', props.who ? "intial" : "initail1");
   }
-
+  
   return (
       <div className="header-container">
         <div className="header-con">  

@@ -14,10 +14,11 @@ const App = () => {
   const [toggle, setToggle] = useState(false)
   const [totalNum , setTotalNum] = useState([])
 
+
   return (
     <div className='container'>
-        {toggle &&  <Modal togg = {setToggle} nani = {itemData} total = {totalNum} whom = {setItemData} glob = {setGlobal}/> }
-        <Header togg = {setToggle} val = {global}/>
+        {toggle &&  <Modal togg = {setToggle} who = {toggle} nani = {itemData} total = {totalNum} whom = {setItemData} glob = {setGlobal}/> }
+        <Header togg = {setToggle} val = {global} who = {toggle}/>
         <div className="items-container">
           <Items/>
           <Menu  setItemData = {setItemData} adder = {setGlobal} tf = {setTotalNum}/>

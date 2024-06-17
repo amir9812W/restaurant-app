@@ -2,6 +2,7 @@ import React, { useState , useEffect} from "react"
 import './modal.css'
 import { collection, addDoc} from "firebase/firestore"; 
 import { dataStore } from "../firebase"
+import { motion } from 'framer-motion'
 
 
 const Modal = (props) => {
@@ -25,9 +26,11 @@ const Modal = (props) => {
 
 
   const toggleHandler = () => {
-    props.togg(prev => !prev)
+    props.togg(prev => !prev);
+    console.log('initial state', props.who ? 'inital' : "initial1");
   }
-
+  
+  console.log(props.who)
   const upDataObjectFunction = (id, val) => {
     
     const newArray = props.nani.map(obj => 
@@ -90,11 +93,40 @@ const Modal = (props) => {
       } catch (e) {
         console.error("Error adding document: ", e);
       }
-    }
+    };
 
+    const variants = {
+      initial: {
+        opacity: 0,
+        y: '10%',
+        transition: {
+          duration: 1
+        }
+      },
+      animate: {
+        opacity: 1,
+        y: '0%',
+    
+      },
+      initial1: {
+        opacity: 1,
+        y: '0%',
+        transition: {
+          duration: .4
+        }
+      },
+      animate1: {
+        opacity: 0,
+        y: '10%'
+      }
+    };
+
+   
 
   return (
-    <div className="modal-container">
+    <motion.div className="modal-container" variants={variants} initial={props.who ? 'initial' : 'initial1'}
+    animate = {props.who ? 'animate' : "animate1"}
+    >
       <div className="another-container">
         <div className="buttom-container">
             <div className="total-amount">
@@ -138,7 +170,7 @@ const Modal = (props) => {
           })}
           </div>
         </div>
-      </div>
+    </motion.div>
   )
 }
 
